@@ -1,0 +1,28 @@
+<div class="overflow-feed ">
+  <div class="column-posts">
+    <% posts.forEach(post=> { %>
+
+      <div class="card border-primary mb-3" style="max-width: 100%;" data-id='<%= post._id %>'>
+        <div class="card-header">
+          <%=post.userName%>
+            <div class="float-right">
+              <span class="<%=post.userName === user.userName ? 'del': 'none' %>">Delete</span>
+            </div>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">
+            <%=post.postMessage%>
+          </h4>
+          <form class="heart" action="/dashboard/likePost/<%= post.id %>?_method=PUT" , method="POST">
+            <button class="out far fa-heart"></button>
+            <button class="out fas fa-heart"></button>
+            : <span class="counter">
+              <%=post.likes%>
+            </span>
+          </form>
+        </div>
+      </div>
+
+      <%}) %>
+  </div>
+</div>

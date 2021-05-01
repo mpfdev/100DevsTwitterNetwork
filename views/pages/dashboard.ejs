@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head') %>
+</head>
+
+<body>
+  <header>
+    <%- include('../partials/navbar') %>
+  </header>
+
+  <main>
+    <div class="main-content">
+      <div class="profile-content">
+        <%- include('../partials/profile') %>
+      </div>
+      <div class="feed-content">
+
+        <div class="profile-functions">
+          <form action="/dashboard/createPost" method="POST">
+            <div class="form-group">
+              <label for="newPost">New Tweet</label>
+              <textarea class="form-control mb-3" id="newPost" name="newPost" rows="3" spellcheck="false"></textarea>
+              <button type="submit" class="btn btn-primary btn-lg btn-block w-100">Add new tweet</button>
+            </div>
+          </form>
+
+        </div>
+
+        <h2 class="text-center mb-2">Feed</h2>
+        <%- include('../partials/feed') %>
+      </div>
+    </div>
+  </main>
+  <script src="/js/index.js"></script>
+</body>
+
+</html>
