@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="#">
-    <img src="https://i.imgur.com/Ac1UzNp.mp4" alt="Logo">
+    <img src="https://i.imgur.com/BpfxP5d.gif" alt="Logo">
   </a>
 
   <h3 align="center">100Devs Twitternet</h3>
@@ -68,7 +68,12 @@ Must have node.js installed on your computer.
    ```sh
    npm install
    ```
-3. Run server
+3. Create a .env file inside config folder
+   ```sh
+   DB_STRING = URL_CONNECT_MONGODB
+   PORT = 3000
+   ```
+4. Run server
    ```sh
    node server.js
    ```
