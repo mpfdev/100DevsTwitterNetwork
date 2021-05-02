@@ -10,7 +10,7 @@ router.get('/', ensureAuth, dashboardController.getIndex)
 router.get('/profile', dashboardController.getProfile)
 
 //New Post
-router.post('/createPost', dashboardController.createPost)
+router.post('/createPost', upload.single('file'), dashboardController.createPost)
 
 //Like Post
 router.put('/likePost/:id', dashboardController.likePost)
