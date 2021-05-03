@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const dashboardController = require('../controllers/dashboard')
+const upload = require('../middleware/multer')
 const { ensureAuth } = require('../middleware/auth')
 
 //Homepage

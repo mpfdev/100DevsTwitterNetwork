@@ -3,7 +3,7 @@
     <% posts.forEach(post=> { %>
 
       <% if(post.userId===user.id) { %>
-        <div class="card border-primary mb-3" style="max-width: 100%;" data-id='<%= post._id %>'>
+        <div class="card border-danger mb-3" style="max-width: 100%;" data-id='<%= post._id %>'>
           <div class="card-header">
             <%=post.userName%>
               <div class="float-right">
